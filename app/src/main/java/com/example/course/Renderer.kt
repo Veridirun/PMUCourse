@@ -16,7 +16,7 @@ class Renderer(private val context: Context) : GLSurfaceView.Renderer {
     private val modelMatrix = FloatArray(16)
     private val mVPMatrix = FloatArray(16)
     private val normalMatrix = FloatArray(16)
-    private val lightPos = floatArrayOf(0f, 0.5f, 2.8f)
+    private val lightPos = floatArrayOf(1f, 1f, 3f)
 
     private lateinit var table: Table
     private lateinit var glass: Glass
@@ -69,7 +69,7 @@ class Renderer(private val context: Context) : GLSurfaceView.Renderer {
         //точка обзора
         Matrix.setLookAtM(viewMatrix, 0,
             1f, 1f, 5f,
-            0f, 0f, 2f,
+            0f, 0f, 3.2f,
             0f, 1f, 0f)
         //Стол
         //преобразование из 3D в 2D
